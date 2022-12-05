@@ -19,8 +19,7 @@ body {
   font-size: 16px;
   width: 100%;
   height: 100vh;
-  background-color: var(--blue-1);
-
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,9 +28,12 @@ body {
 .container {
   width: 400px;
   height: 80vh;
-  background-color: var(--blue-2);
   border-radius: 20px;
-  box-shadow: rgba(10px 10px 10px var(--shadow-dark));
+  /* box-shadow: rgba(10px 10px 10px var(--shadow-dark)); */
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .upper-data {
@@ -53,14 +55,20 @@ body {
   padding: 1em;
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 
-.upper-data img {
+.upperImg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
 }
 
 .weather-data {
@@ -74,6 +82,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.weather-data:hover {
+  transform: scale(1.5);
+  transition: 0.5s all ease-in-out;
 }
 
 .location {
@@ -134,6 +147,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   color: var(--white);
+  font-size: 14px;
 }
 
 .search {
@@ -150,4 +164,51 @@ body {
   color: var(--grey-1);
   font-size: 0.8em;
   text-align: center;
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.search input:hover {
+  background-color: var(--shadow-dark);
+}
+
+.search input::placeholder {
+  color: black;
+}
+
+.search input:focus::placeholder {
+  color: transparent;
+}
+
+.beyondFreezing {
+  background-color: purple;
+}
+
+.freezing {
+  background-color: darkblue;
+}
+
+.veryCold {
+  background-color: blue;
+}
+
+.cold {
+  background-color: lightblue;
+}
+
+.neutral {
+  background-color: green;
+}
+
+.warm {
+  background-color: orange;
+}
+
+.hot {
+  background-color: rgb(212, 29, 29);
+}
+
+.veryHot {
+  background-color: crimson;
 }

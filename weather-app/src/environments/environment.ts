@@ -5,16 +5,13 @@
 export const environment = {
   production: false,
   weatherApiBaseUrl:
-    'https://community-open-weather-map.p.rapidapi.com/weather',
-  XRapidAPIHostHeaderName: 'X-RapidAPI-Host',
-  XRapidAPIHostHeaderValue: 'community-open-weather-map.p.rapidapi.com',
-  XRapidAPIKeyHeaderName: 'X-RapidAPI-Key',
+    'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast',
 
   // In order to get your own key to use this api
   // visit the following link:
-  // https://rapidapi.com/community/api/open-weather-map/
+  // https://www.visualcrossing.com/weather-api
   // once you have your key, put it within the quotes in the environment var below
-  XRapidAPIKeyHeaderValue: '',
+  visualCrossingApiKey: '',
 };
 
 /*

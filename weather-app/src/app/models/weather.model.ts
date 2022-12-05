@@ -1,54 +1,37 @@
 export interface weatherData {
-  coord: Coord;
-  weather: Weather[];
-  base: string;
-  main: Main;
-  visibility: number;
-  wind: Wind;
-  clouds: Clouds;
-  dt: number;
-  sys: Sys;
-  timezone: number;
-  id: number;
+  address: string;
+  alerts: any;
+  currentConditions: CurrentConditions;
+  distance: number;
+  id: string;
+  index: number;
+  latitude: number;
+  longitude: number;
   name: string;
-  cod: number;
+  stationContributions: any;
+  time: number;
+  tz: string;
+  values: any;
 }
 
-export interface Coord {
-  lon: number;
-  lat: number;
-}
-
-export interface Weather {
-  id: number;
-  main: string;
-  description: string;
-  icon: string;
-}
-
-export interface Main {
-  temp: number;
-  feelslike: number;
-  temp_min: number;
-  temp_max: number;
-  pressure: number;
+export interface CurrentConditions {
+  cloudcover: any;
+  datetime: string;
+  dew: number;
+  heatindex: any;
   humidity: number;
-}
-
-export interface Wind {
-  speed: number;
-  deg: number;
-  gust: number;
-}
-
-export interface Clouds {
-  all: number;
-}
-
-export interface Sys {
-  type: number;
-  id: number;
-  country: string;
-  sunrise: number;
-  sunset: number;
+  icon: string;
+  moonphase: Number;
+  precip: any;
+  sealevelpressure: number;
+  snowdepth: any;
+  stations: string;
+  sunrise: string;
+  sunset: string;
+  temp: number;
+  visibility: number;
+  wdir: number;
+  wgust: any;
+  windchill: any;
+  wspd: number;
 }
